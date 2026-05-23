@@ -161,7 +161,7 @@
 
     <div class="pad-controls">
       <button class="btn btn-primary" id="prev-btn" disabled>&#8592; Previous</button>
-      <button class="btn btn-primary" id="next-btn">Next step &#8594;</button>
+      <button class="btn btn-primary" id="next-btn">Next step →</button>
       <button class="btn btn-secondary" id="reset-btn">Reset</button>
       <span class="step-counter" id="step-counter">Step 0 / 6</span>
     </div>
@@ -201,7 +201,7 @@
 
         <!-- Step 2: Show spent 1/4 -->
         <g class="step-elem" data-step="2">
-          <text x="20" y="315" class="pencil-text" font-size="20" font-weight="700">Each spent 1/4 &#8594; each keeps 3/4</text>
+          <text x="20" y="315" class="pencil-text" font-size="20" font-weight="700">Each spent 1/4 → each keeps 3/4</text>
           <text x="40" y="350" class="pencil-text" fill="var(--pencil-soft)" font-size="16">Both bars shrink by the same proportion</text>
           <text x="40" y="380" class="pencil-text hw-red" font-size="16" font-weight="700">&#9889; Key: the gap also shrinks to 3/4 of original!</text>
         </g>
@@ -245,7 +245,7 @@
         <g class="step-elem" data-step="6">
           <rect x="15" y="855" width="380" height="55" fill="#f0fdf4" stroke="var(--ink-green)" stroke-width="2" rx="6" class="answer-box"/>
           <text x="35" y="885" class="pencil-text" font-size="20" font-weight="700">Baba had $20 at first</text>
-          <text x="35" y="910" class="pencil-text" fill="var(--pencil-soft)" font-size="14">Check: Ali $60, Baba $20 &#8594; after: Ali $45, Baba $15, diff=$30 &#10003;</text>
+          <text x="35" y="910" class="pencil-text" fill="var(--pencil-soft)" font-size="14">Check: Ali $60, Baba $20 → after: Ali $45, Baba $15, diff=$30 ✓</text>
         </g>
 
       </svg>
@@ -254,7 +254,7 @@
     <div style="margin-top:14px;">
       <div class="alert-box alert-trap">
         <h4>&#128293; Common trap</h4>
-        <p>Students think "difference unchanged" means the gap stays exactly the same number. It doesn't! If both spend 1/4, the gap also shrinks to 3/4 of the original. Train them to see: <strong>same fraction change &#8594; gap scales by the kept fraction</strong>.</p>
+        <p>Students think "difference unchanged" means the gap stays exactly the same number. It doesn't! If both spend 1/4, the gap also shrinks to 3/4 of the original. Train them to see: <strong>same fraction change → gap scales by the kept fraction</strong>.</p>
       </div>
       <div class="alert-box alert-tip">
         <h4>&#127793; Teaching tip</h4>
@@ -267,7 +267,7 @@
       <div style="padding:10px 0; font-size:13px; color:var(--ink-soft);">
         <p><strong>M1:</strong> Identify Ali = 3u, Baba = 1u, difference = 2u</p>
         <p><strong>M1:</strong> Show both keep 3/4, difference after = 3/4 &#215; 2u = 3u/2 (or 6u/4)</p>
-        <p><strong>M1:</strong> 3u/2 = 30 &#8594; u = 20</p>
+        <p><strong>M1:</strong> 3u/2 = 30 → u = 20</p>
         <p><strong>A1:</strong> Baba at first = $20</p>
       </div>
     </details>
@@ -292,7 +292,7 @@
       svgEl.querySelectorAll('.bar-fill, .node-fill').forEach(fill => { const parentStep = parseInt(fill.closest('.step-elem').dataset.step); fill.classList.toggle('ghost', parentStep < currentStep); });
       narrationEl.innerHTML = narrations[currentStep]; counterEl.textContent = `Step ${currentStep} / ${totalSteps}`;
       prevBtn.disabled = currentStep === 0; nextBtn.disabled = currentStep === totalSteps;
-      nextBtn.textContent = currentStep === totalSteps ? 'Done &#10003;' : 'Next step &#8594;';
+      nextBtn.textContent = currentStep === totalSteps ? 'Done ✓' : 'Next step →';
     }
     nextBtn.addEventListener('click', () => { if (currentStep < totalSteps) { currentStep++; render(); } });
     prevBtn.addEventListener('click', () => { if (currentStep > 0) { currentStep--; render(); } });
@@ -306,7 +306,7 @@
     3: 'Step 3 — After: Ali has 9u/4, Baba has 3u/4. Diff after = 6u/4 = 3u/2.',
     4: 'Step 4 — Given: diff after = $30. So 3u/2 = 30, which means u = $20.',
     5: 'Step 5 — Baba at first = 1u = $20.',
-    6: 'Step 6 — Check: Ali $60, Baba $20. After spending 1/4: Ali $45, Baba $15. Diff = $30 &#10003;'
+    6: 'Step 6 — Check: Ali $60, Baba $20. After spending 1/4: Ali $45, Baba $15. Diff = $30 ✓'
   });
   document.addEventListener('keydown', (e) => { if (e.key === 'ArrowRight' || e.key === ' ') { e.preventDefault(); ctrl.next(); } if (e.key === 'ArrowLeft') { e.preventDefault(); ctrl.prev(); } });
 </script>

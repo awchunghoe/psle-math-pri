@@ -152,7 +152,7 @@
 
     <div class="pad-controls">
       <button class="btn btn-primary" id="prev-btn" disabled>&#8592; Previous</button>
-      <button class="btn btn-primary" id="next-btn">Next step &#8594;</button>
+      <button class="btn btn-primary" id="next-btn">Next step →</button>
       <button class="btn btn-secondary" id="reset-btn">Reset</button>
       <span class="step-counter" id="step-counter">Step 0 / 7</span>
     </div>
@@ -213,19 +213,19 @@
 
         <!-- Step 5: Verify total -->
         <g class="step-elem" data-step="5">
-          <text x="20" y="650" class="pencil-text" font-size="18" font-weight="700">Verify total: 52 + 28 = 80 &#10003;</text>
+          <text x="20" y="650" class="pencil-text" font-size="18" font-weight="700">Verify total: 52 + 28 = 80 ✓</text>
         </g>
 
         <!-- Step 6: Verify transfer -->
         <g class="step-elem" data-step="6">
-          <text x="20" y="690" class="pencil-text" font-size="18" font-weight="700">Verify transfer: Ali 52 - 12 = 40, Baba 28 + 12 = 40 &#10003;</text>
+          <text x="20" y="690" class="pencil-text" font-size="18" font-weight="700">Verify transfer: Ali 52 - 12 = 40, Baba 28 + 12 = 40 ✓</text>
         </g>
 
         <!-- Step 7: Answer -->
         <g class="step-elem" data-step="7">
           <rect x="15" y="720" width="420" height="55" fill="#f0fdf4" stroke="var(--ink-green)" stroke-width="2" rx="6" class="answer-box"/>
           <text x="35" y="750" class="pencil-text" font-size="20" font-weight="700">Ali: 52 marbles, Baba: 28 marbles</text>
-          <text x="35" y="775" class="pencil-text" fill="var(--pencil-soft)" font-size="14">After transfer: both have 40 &#10003;</text>
+          <text x="35" y="775" class="pencil-text" fill="var(--pencil-soft)" font-size="14">After transfer: both have 40 ✓</text>
         </g>
 
       </svg>
@@ -284,8 +284,8 @@
     2: 'Step 2 — After: both equal, so each has 80 / 2 = 40.',
     3: 'Step 3 — Work backwards: Ali gave 12 away, so Ali before = 40 + 12 = 52.',
     4: 'Step 4 — Baba received 12, so Baba before = 40 - 12 = 28.',
-    5: 'Step 5 — Verify total: 52 + 28 = 80 &#10003;',
-    6: 'Step 6 — Verify transfer: 52 - 12 = 40, 28 + 12 = 40 &#10003;',
+    5: 'Step 5 — Verify total: 52 + 28 = 80 ✓',
+    6: 'Step 6 — Verify transfer: 52 - 12 = 40, 28 + 12 = 40 ✓',
     7: 'Step 7 — Ali: 52 marbles, Baba: 28 marbles. All checks pass!'
   });
   document.addEventListener('keydown', (e) => { if (e.key === 'ArrowRight' || e.key === ' ') { e.preventDefault(); ctrl.next(); } if (e.key === 'ArrowLeft') { e.preventDefault(); ctrl.prev(); } });
